@@ -1,0 +1,4 @@
+#define VERSION "@Algorithms_VERSION@"
+#define VERSION_MAJOR @Algorithms_VERSION_MAJOR@
+#define VERSION_MINOR @Algorithms_VERSION_MINOR@
+#define VERSION_PATCH @Algorithms_VERSION_PATCH@
