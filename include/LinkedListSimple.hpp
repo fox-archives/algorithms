@@ -44,8 +44,9 @@ public:
   auto remove(T item) -> T &;
 
   // read
-  auto getStart() -> T &;
-  auto getEnd() -> T &;
+  auto getStart() -> T;
+  auto getEnd() -> T;
+  auto get(std::size_t i) -> T;
   auto getIndexOf(T item) -> std::size_t;
   auto getLastIndexOf(T item) -> std::size_t;
   auto contains(T item) -> bool;

@@ -1,14 +1,12 @@
 # shellcheck shell=bash
 
-task.conan-install() {
-	mkdir -p './build'
-	cd './build'
+task.init() {
+	mkdir -p './build' && cd './build'
 	conan install ..
 }
 
-task.build-gen() {
-	mkdir -p './build'
-	cd './build'
+task.prebuild() {
+	mkdir -p './build' && cd './build'
 	cmake -G Ninja ../
 }
 

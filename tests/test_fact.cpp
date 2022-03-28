@@ -10,5 +10,5 @@ TEST_CASE("factorials are computed", "[factorial]") {
 }
 
 TEST_CASE("factorial is wrong", "[factorial]") {
-  REQUIRE(factorial(1) == 2);
+  REQUIRE(factorial(1) == 1);
 }

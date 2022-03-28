@@ -22,7 +22,7 @@ auto LinkedListSimple<T>::clone() -> LinkedListSimple<T> {
   auto list = LinkedListSimple();
   Node *current_node = m_head;
   while (current_node != nullptr) {
-      
+
     current_node = current_node->next;
   }
 }
@@ -54,7 +54,16 @@ auto LinkedListSimple<T>::addEnd(T item) -> T & {
 }
 
 template <typename T>
-auto LinkedListSimple<T>::getItem(std::size_t i) -> T {
+auto LinkedListSimple<T>::add(T item) -> T & {}
+
+template <typename T>
+auto LinkedListSimple<T>::add(std::size_t, T item) -> T & {}
+
+template <typename T>
+auto LinkedListSimple<T>::set(std::size_t, T item) -> T & {}
+
+template <typename T>
+auto LinkedListSimple<T>::get(std::size_t i) -> T {
   if (m_head == nullptr)
     throw std::out_of_range("LinkedList::getItem: Out of range");
 
