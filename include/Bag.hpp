@@ -1,3 +1,5 @@
+#include <iostream>
+
 #ifndef BAG_HPP
 #define BAG_HPP
 
@@ -10,4 +12,5 @@ public:
   auto size() -> bool;
 };
 
+#include "../src/algorithms/Bag.tpp"
 #endif

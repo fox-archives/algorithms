@@ -15,5 +15,5 @@ public:
   auto size() -> std::size_t;
 };
 
-#include "./Queue.tpp"
+#include "../src/algorithms/Queue.tpp"
 #endif

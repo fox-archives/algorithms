@@ -1,7 +1,31 @@
 #include <cstddef>
-#include <new>
+#include <iostream>
+#include <stdexcept>
 
-#include "./LinkedListSimple.hpp"
+template <typename T>
+LinkedListSimple<T>::~LinkedListSimple() {
+  clear();
+}
+
+template <typename T>
+auto LinkedListSimple<T>::clear() -> void {
+  Node *current_node = m_head;
+  while (current_node != nullptr) {
+    auto *temp = current_node;
+    current_node = current_node->next;
+    delete temp;
+  }
+}
+
+template <typename T>
+auto LinkedListSimple<T>::clone() -> LinkedListSimple<T> {
+  auto list = LinkedListSimple();
+  Node *current_node = m_head;
+  while (current_node != nullptr) {
+      
+    current_node = current_node->next;
+  }
+}
 
 template <typename T>
 auto LinkedListSimple<T>::addStart(T item) -> T & {
@@ -18,7 +42,7 @@ auto LinkedListSimple<T>::addEnd(T item) -> T & {
 
   if (m_head == nullptr) {
     m_head = new_node;
-    return *new_node;
+    return new_node->item;
   }
 
   Node *current_node = m_head;
@@ -26,7 +50,7 @@ auto LinkedListSimple<T>::addEnd(T item) -> T & {
     ;
 
   current_node->next = new_node;
-  return *new_node;
+  return new_node->item;
 }
 
 template <typename T>
@@ -42,6 +66,14 @@ auto LinkedListSimple<T>::getItem(std::size_t i) -> T {
   if (counter != i) {
     throw std::out_of_range("LinkedList::getItem: Out of range");
   }
-
   return current_node->item;
+}
+
+template <typename T>
+auto LinkedListSimple<T>::print() -> void {
+  Node *current_node = m_head;
+
+  for (std::size_t i = 0; current_node != nullptr; ++i, current_node = current_node->next) {
+    std::cout << i << ": " << current_node << '\n';
+  }
 }
