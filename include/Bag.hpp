@@ -12,5 +12,5 @@ public:
   auto size() -> bool;
 };
 
-#include "../src/algorithms/Bag.tpp"
+#include "../src/Bag.tpp"
 #endif

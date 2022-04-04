@@ -1,5 +1,5 @@
 #include "Config.h"
-#include "LinkedListSimple.hpp"
+#include "LinkedList.hpp"
 
 #include <iostream>
 
@@ -7,11 +7,11 @@ auto main() -> int {
   std::cout << "Demonstrating a Linked List!" << '\n';
   std::cout << "Current version: " << VERSION << '\n';
 
-  auto list = LinkedListSimple<std::string>{};
-  list.addEnd("ein");
-  list.addEnd("zwei");
-  list.addEnd("drei");
-  list.addEnd("veir");
+  auto list = LinkedList<std::string>{};
+  list.insert("ein");
+  list.insert("zwei");
+  list.insert("drei");
+  list.insert("veir");
 
   list.print();
 }

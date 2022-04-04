@@ -53,5 +53,5 @@ public:
   auto print() -> void;
 };
 
-#include "../src/algorithms/LinkedListSimple.tpp"
+#include "../src/LinkedListFull.tpp"
 #endif // LINKED_LIST_SIMPLE_H
