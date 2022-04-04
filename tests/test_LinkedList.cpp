@@ -1,6 +1,11 @@
-#define CATCH_CONFIG_MAIN
-#include "catch2/catch.hpp"
+#include <array>
+#include <cassert>
+#include <iostream>
 
-TEST_CASE("Runs properly", "[list]") {
-  REQUIRE(2 == 3);
+#include "LinkedList.hpp"
+
+auto main() -> int {
+  auto list = LinkedListSimple<std::string>{};
+  auto item = list.getItem(0);
+  std::cout << item << '\n';
 }

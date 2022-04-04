@@ -21,9 +21,6 @@ enable_testing()
 
 configure_file(Config.h.in Config.h)
 
-# add_subdirectory(src)
-# add_subdirectory(tests)
-
 add_executable(test_Algebra "tests/test_Algebra.cpp")
 target_include_directories(test_Algebra PUBLIC "${PROJECT_BINARY_DIR}")
 target_include_directories(test_Algebra PUBLIC "include")

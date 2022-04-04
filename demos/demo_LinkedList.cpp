@@ -1,7 +1,7 @@
+#include <iostream>
+
 #include "Config.h"
 #include "LinkedList.hpp"
-
-#include <iostream>
 
 auto main() -> int {
   std::cout << "Demonstrating a Linked List!" << '\n';
